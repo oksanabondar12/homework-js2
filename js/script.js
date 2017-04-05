@@ -1,7 +1,7 @@
 var n = Number(prompt("Введите число не равное 0 и 1", ""));
 
 function fibonacchiRecursion(n){
-    
+
     //F0 = 0, F1 = 1, Fn = Fn-1 + Fn-2, n >=2
     //завершает работу, когда n = 0 или n = 1
     if (n == 0)
@@ -33,8 +33,10 @@ function fibonacchiCylce(n){
  var result = val1 + val2;
  //Цикл здесь начинается с i=3, так как первое и второе числа Фибоначчи заранее записаны в переменные a=1, b=1.
   for (var i = 3; i <= n; i++) {
+    //каждое слудующее число равно сумме двух других
     result = val1 + val2;
     val1 = val2;
+    //приравниваем второму числу результат
     val2 = result;
   }
   return val2;
